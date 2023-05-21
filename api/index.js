@@ -43,6 +43,10 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+app.get("/", (req, res) => {
+   res.send("Hello to blog api");
+});
+
 // connecting to backend server
 const connection = async () => {
   try {
