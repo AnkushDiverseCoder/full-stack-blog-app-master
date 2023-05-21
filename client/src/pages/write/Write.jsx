@@ -23,11 +23,11 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("http://localhost:8000/api/upload", data);
+        await axios.post("https://fullstackblog-l1gk.onrender.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("http://localhost:8000/api/post", newPost);
+      const res = await axios.post("https://fullstackblog-l1gk.onrender.com/api/post", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {}
   };

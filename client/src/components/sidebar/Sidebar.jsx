@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("http://localhost:8000/api/categories");
+      const res = await axios.get("https://fullstackblog-l1gk.onrender.com/api/categories");
       setCat(res.data);
     };
     getCats();

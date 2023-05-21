@@ -12,7 +12,7 @@ export default function Homepage() {
 
   useEffect(()=>{
      const fetchPosts = async()=>{
-      const res = await axios.get("http://localhost:8000/api/post" + search)
+      const res = await axios.get("https://fullstackblog-l1gk.onrender.com/api/post" + search)
       setPosts(res.data) 
     }
      fetchPosts()

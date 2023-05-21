@@ -14,7 +14,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("http://localhost:8000/api/auth/register", {
+      const res = await axios.post("https://fullstackblog-l1gk.onrender.com/api/auth/register", {
         username,
         email,
         password,

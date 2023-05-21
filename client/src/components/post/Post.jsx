@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post({ post }) {
-  const PF="http://localhost:8000/images/";
+  const PF="https://fullstackblog-l1gk.onrender.com/images/";
   return (
     <div className="post text">
       {post.photo && (
@@ -16,7 +16,7 @@ export default function Post({ post }) {
             <span className="postCat" key={post._id}>
               <Link
                 className="link"
-                to="http://localhost:8000/api/post?cat=Music"
+                to="https://fullstackblog-l1gk.onrender.com/api/post?cat=Music"
               >
                 {item.name}
               </Link>

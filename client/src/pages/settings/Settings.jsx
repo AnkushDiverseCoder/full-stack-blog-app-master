@@ -12,7 +12,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8000/images/"
+  const PF = "https://fullstackblog-l1gk.onrender.com/images/"
 
   const handleSubmit = async (e) => {
     console.log(user)
@@ -31,11 +31,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("http://localhost:8000/api/upload", data);
+        await axios.post("https://fullstackblog-l1gk.onrender.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put("http://localhost:8000/api/user/" + user._id, updatedUser);
+      const res = await axios.put("https://fullstackblog-l1gk.onrender.com/api/user/" + user._id, updatedUser);
       console.log(updatedUser)
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
@@ -46,7 +46,7 @@ export default function Settings() {
   
   const handleDelete = async (e)=>{
     e.preventDefault();
-    const res = await axios.delete("http://localhost:8000/api/user/" + user._id,{
+    const res = await axios.delete("https://fullstackblog-l1gk.onrender.com/api/user/" + user._id,{
       userId:user._id
     })
     
